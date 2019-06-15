@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="chromeTest(failed)" parallel="tests">
+    <parameter name="nodeurl" value="http://localhost:1231/wd/hub/"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.ActiTime.test.TC03Test">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+          <include name="Verifyversion"/>
+        </methods>
+      </class> <!-- com.ActiTime.test.TC03Test -->
+    </classes>
+  </test> <!-- chromeTest(failed) -->
+  <test thread-count="5" name="firefoxTest(failed)" parallel="tests">
+    <parameter name="nodeurl" value="http://localhost:1231/wd/hub/"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.ActiTime.test.TC01Test">
+        <methods>
+          <include name="postcondition"/>
+          <include name="ValidLoginLogout"/>
+          <include name="precondition"/>
+        </methods>
+      </class> <!-- com.ActiTime.test.TC01Test -->
+      <class name="com.ActiTime.test.TC04Test">
+        <methods>
+          <include name="postcondition"/>
+          <include name="Verifybuildnumber"/>
+          <include name="precondition"/>
+        </methods>
+      </class> <!-- com.ActiTime.test.TC04Test -->
+      <class name="com.ActiTime.test.TC03Test">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+          <include name="Verifyversion"/>
+        </methods>
+      </class> <!-- com.ActiTime.test.TC03Test -->
+    </classes>
+  </test> <!-- firefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
